@@ -9,7 +9,11 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "vercel:preview": "vercel",
-    "vercel:deploy": "vercel --prod"
+    "vercel:deploy": "vercel --prod",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.5",
