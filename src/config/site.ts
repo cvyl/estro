@@ -24,8 +24,8 @@ export const rootMetadata = {
     },
     description: SITE_DESCRIPTION,
     openGraph: {
-        type: "website",
-        locale: "en_US",
+        type: 'website',
+        locale: 'en_US',
         site_name: SITE_NAME,
         url: BASE_URL,
         title: SITE_TITLE,
@@ -48,6 +48,6 @@ export const rootMetadata = {
     twitter: {
         handle: '',
         site: BASE_URL,
-        cardType: "summary_large_image",
+        cardType: 'summary_large_image',
     },
     };

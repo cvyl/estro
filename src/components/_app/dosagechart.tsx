@@ -1,18 +1,13 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/RfthnSUMOvx
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Label } from "@/components/ui/label"
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
-import { Input } from "@/components/ui/input"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
+import { useState } from 'react';
+import { Label } from '@/components/ui/label';
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import { Input } from '@/components/ui/input';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
+import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table';
 import { Line, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 const data = [
@@ -44,40 +39,40 @@ const data = [
       average: 349,
       today: 430,
     },
-  ]
+  ];
   
 
 
 export default function DosageComponent() {
-  const [selectedDate, setSelectedDate] = useState(new Date())
-  const [dosage, setDosage] = useState(0)
-  const [estrogenType, setEstrogenType] = useState("")
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [dosage, setDosage] = useState(0);
+  const [estrogenType, setEstrogenType] = useState('');
   const [dosageHistory, setDosageHistory] = useState([
-    { date: new Date("2023-05-01"), dosage: 5, type: "Estradiol Enanthate" },
-    { date: new Date("2023-05-15"), dosage: 4, type: "Estradiol Gel" },
-    { date: new Date("2023-06-01"), dosage: 6, type: "Estradiol Pills" },
-    { date: new Date("2023-06-15"), dosage: 5, type: "Estradiol Enanthate" },
-    { date: new Date("2023-07-01"), dosage: 4, type: "Estradiol Gel" },
-  ])
+    { date: new Date('2023-05-01'), dosage: 5, type: 'Estradiol Enanthate' },
+    { date: new Date('2023-05-15'), dosage: 4, type: 'Estradiol Gel' },
+    { date: new Date('2023-06-01'), dosage: 6, type: 'Estradiol Pills' },
+    { date: new Date('2023-06-15'), dosage: 5, type: 'Estradiol Enanthate' },
+    { date: new Date('2023-07-01'), dosage: 4, type: 'Estradiol Gel' },
+  ]);
   const handleDateChange = (date: Date) => {
-    setSelectedDate(date)
-  }
+    setSelectedDate(date);
+  };
   const handleDosageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDosage(parseFloat(e.target.value))
-  }
+    setDosage(parseFloat(e.target.value));
+  };
   
   const handleEstrogenTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setEstrogenType(e.target.value)
-  }
+    setEstrogenType(e.target.value);
+  };
   const handleLogDosage = () => {
-    setDosageHistory([...dosageHistory, { date: selectedDate, dosage, type: estrogenType }])
-    setDosage(0)
-    setEstrogenType("")
-  }
+    setDosageHistory([...dosageHistory, { date: selectedDate, dosage, type: estrogenType }]);
+    setDosage(0);
+    setEstrogenType('');
+  };
   const chartData = dosageHistory.map((entry) => ({
     x: entry.date.toISOString().slice(0, 10),
     y: entry.dosage,
-  }))
+  }));
   return (
     <div className="flex flex-col h-screen">
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
@@ -166,11 +161,11 @@ export default function DosageComponent() {
                 dataKey="average"
                 activeDot={{
                   r: 6,
-                  style: { fill: "var(--theme-primary)", opacity: 0.25 },
+                  style: { fill: 'var(--theme-primary)', opacity: 0.25 },
                 }}
                 style={
                     {
-                      stroke: "var(--theme-primary)",
+                      stroke: 'var(--theme-primary)',
                     } as React.CSSProperties
                   }
               />
@@ -180,11 +175,11 @@ export default function DosageComponent() {
                 strokeWidth={2}
                 activeDot={{
                   r: 8,
-                  style: { fill: "var(--theme-primary)" },
+                  style: { fill: 'var(--theme-primary)' },
                 }}
                 style={
                   {
-                    stroke: "var(--theme-primary)",
+                    stroke: 'var(--theme-primary)',
                   } as React.CSSProperties
                 }
               />
@@ -199,7 +194,7 @@ export default function DosageComponent() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function CalendarDaysIcon() {
@@ -226,5 +221,5 @@ function CalendarDaysIcon() {
       <path d="M12 18h.01" />
       <path d="M16 18h.01" />
     </svg>
-  )
+  );
 }

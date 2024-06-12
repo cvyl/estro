@@ -1,4 +1,3 @@
-import PrimarySkeleton from '@/components/_app/skeleton/primary';
 import React, { Suspense } from 'react';
 import Loading from './loading';
 import DosageComponent from '@/components/_app/dosagechart';

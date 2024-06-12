@@ -10,5 +10,5 @@ export default function PrimarySkeleton() {
                 <Skeleton className='h-4 w-1/3' />
             </div>
         </div>
-    )
+    );
 }

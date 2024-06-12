@@ -3,9 +3,9 @@
  * @see https://v0.dev/t/EqKoUsFTWtL
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
+import Link from 'next/link';
+import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -14,8 +14,8 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-  } from "@/components/ui/navigation-menu"
-import Image from "next/image"
+  } from '@/components/ui/navigation-menu';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 export default function NavBar() {
@@ -54,7 +54,7 @@ return (
             </NavigationMenu>
         
     </>
-)
+);
 }
 
 function MenuIcon() {
@@ -74,7 +74,7 @@ function MenuIcon() {
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
-  )
+  );
 }
 
 
@@ -93,5 +93,5 @@ function MountainIcon() {
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }

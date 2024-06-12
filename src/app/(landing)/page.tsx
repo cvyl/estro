@@ -1,12 +1,9 @@
-import Link from "next/link"
-import { Skeleton } from "@/components/ui/skeleton"
-import '@/app/globals.css'
+import Link from 'next/link';
+import { Skeleton } from '@/components/ui/skeleton';
+import '@/app/globals.css';
 import { SignedOut, SignedIn, UserButton } from '@clerk/nextjs';
 
 export default function Component() {
-  /**
-   * Implement clerk login modal on press off account icon
-   */
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-sm z-50 px-4 md:px-6 h-14 flex items-center justify-between">
@@ -155,5 +152,5 @@ export default function Component() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
