@@ -34,7 +34,7 @@ export const rootMetadata = {
 		description: SITE_DESCRIPTION,
 		images: [
 			{
-				url: `${BASE_URL}/og-image.png`,
+				url: `${BASE_URL}/imagehere`,
 				width: 1200,
 				height: 630,
 				alt: SITE_TITLE
