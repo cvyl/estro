@@ -17,10 +17,7 @@ export default function LandingPage() {
 				</Link>
 				<SignedOut>
 					<SignInButton mode='modal'>
-						<div
-							className='rounded-full bg-background p-1 transition-colors hover:bg-gray-800'
-							prefetch={false}
-						>
+						<div className='rounded-full bg-background p-1 transition-colors hover:bg-gray-800'>
 							<svg
 								className='h-7 w-7'
 								viewBox='0 0 24 24'

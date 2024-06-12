@@ -31,7 +31,10 @@ import {
 import { Button } from '@/components/ui/button'
 import { DialogClose } from '@radix-ui/react-dialog'
 
+import { useAuth } from '@clerk/nextjs'
+
 export default function MenuBar() {
+	const { isLoaded, userId, sessionId, getToken } = useAuth()
 	return (
 		<Menubar
 		/**
@@ -143,6 +146,18 @@ export default function MenuBar() {
 						</DialogTrigger>
 					</MenubarContent>
 				</MenubarMenu>
+				{/* UserButton set on the right side of the menu bar*/}
+				<div className='flex items-center gap-2'>
+					<Button variant='ghost' size='icon' className='rounded-full'>
+						<span className='sr-only'>Search</span>
+					</Button>
+					<Button variant='ghost' size='icon' className='rounded-full'>
+						<span className='sr-only'>Notifications</span>
+					</Button>
+					<Button variant='ghost' size='icon' className='rounded-full'>
+						<span className='sr-only'>User Menu</span>
+					</Button>
+				</div>
 
 				<DialogContent>
 					<DialogHeader>
