@@ -5,33 +5,40 @@ import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 import { rootMetadata } from '@/config/site'
 import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 
-const fontSans = FontSans({ subsets: 
-  ['latin'],
-  variable: '--font-sans',
-})
+const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = rootMetadata
 
 export default function RootLayout({
-  children,
+	children
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  return (
-    <ClerkProvider>
-    <html lang='en' suppressHydrationWarning>
-      <body className={cn('min-h-screen bg-background font-sans antialiased',fontSans.variable)}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          //enableSystem
-          disableTransitionOnChange
-        >
-        {children}
-        </ThemeProvider>
-        </body>
-    </html>
-    </ClerkProvider>
-  )
+	return (
+		<ClerkProvider
+			appearance={{
+				baseTheme: dark
+			}}
+		>
+			<html lang='en' suppressHydrationWarning>
+				<body
+					className={cn(
+						'min-h-screen bg-background font-sans antialiased',
+						fontSans.variable
+					)}
+				>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='dark'
+						//enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+					</ThemeProvider>
+				</body>
+			</html>
+		</ClerkProvider>
+	)
 }
