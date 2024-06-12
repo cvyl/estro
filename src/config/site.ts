@@ -48,7 +48,7 @@ export const rootMetadata = {
 		}
 	],
 	twitter: {
-		handle: '',
+		handle: 'estro',
 		site: BASE_URL,
 		cardType: 'summary_large_image'
 	}
