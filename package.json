@@ -12,10 +12,11 @@
 		"prettier:fix": "prettier --write --ignore-path .gitignore ./",
 		"vercel:preview": "vercel",
 		"vercel:deploy": "vercel --prod",
-		"prepare": "simple-git-hooks"
+		"prepare": "simple-git-hooks",
+
 	},
 	"simple-git-hooks": {
-		"pre-commit": "pnpm lint-staged"
+		"pre-commit": "pnpm exec lint-staged"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^5.1.5",
