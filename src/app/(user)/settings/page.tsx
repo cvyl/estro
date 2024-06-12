@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function SettingsPage() {
     return (
@@ -6,5 +6,5 @@ export default function SettingsPage() {
             <h1>Settings</h1>
             <p>This is the settings page</p>
         </>
-    );
+    )
 }

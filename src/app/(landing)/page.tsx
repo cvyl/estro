@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Skeleton } from '@/components/ui/skeleton';
-import '@/app/globals.css';
-import { SignedOut, SignedIn, UserButton } from '@clerk/nextjs';
+import Link from 'next/link'
+import { Skeleton } from '@/components/ui/skeleton'
+import '@/app/globals.css'
+import { SignedOut, SignedIn, UserButton } from '@clerk/nextjs'
 
 export default function Component() {
   return (
@@ -152,5 +152,5 @@ export default function Component() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

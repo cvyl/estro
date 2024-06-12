@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
 import {
     Menubar,
     MenubarCheckboxItem,
@@ -16,7 +16,7 @@ import {
     MenubarSubContent,
     MenubarSubTrigger,
     MenubarTrigger,
-  } from '@/components/ui/menubar';
+  } from '@/components/ui/menubar'
 
 import {
     Dialog,
@@ -26,10 +26,10 @@ import {
     DialogTitle,
     DialogTrigger,
     DialogFooter,
-} from '@/components/ui/dialog';
+} from '@/components/ui/dialog'
 
-import { Button } from '@/components/ui/button';
-import { DialogClose } from '@radix-ui/react-dialog';
+import { Button } from '@/components/ui/button'
+import { DialogClose } from '@radix-ui/react-dialog'
 
 export default function MenuBar() {
     return (
@@ -175,5 +175,5 @@ export default function MenuBar() {
       </Dialog>
 
       </Menubar>
-    );
+    )
 }
