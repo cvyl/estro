@@ -43,10 +43,10 @@ export default async function Layout({ children }: { children: React.ReactNode }
             <ContextMenuContent>
             <ContextMenuSeparator />
             <ContextMenuLabel>Text size</ContextMenuLabel>
-            <ContextMenuRadioGroup value="medium">
-                <ContextMenuRadioItem value="small">Small</ContextMenuRadioItem>
-                <ContextMenuRadioItem value="medium">Medium</ContextMenuRadioItem>
-                <ContextMenuRadioItem value="large">Large</ContextMenuRadioItem>
+            <ContextMenuRadioGroup value='medium'>
+                <ContextMenuRadioItem value='small'>Small</ContextMenuRadioItem>
+                <ContextMenuRadioItem value='medium'>Medium</ContextMenuRadioItem>
+                <ContextMenuRadioItem value='large'>Large</ContextMenuRadioItem>
             </ContextMenuRadioGroup>
             <ContextMenuSeparator />
             <ContextMenuLabel>Options</ContextMenuLabel>
@@ -68,9 +68,9 @@ export default async function Layout({ children }: { children: React.ReactNode }
                 </ContextMenuSubContent>
             </ContextMenuSub>
             </ContextMenuContent>
-            <main className="
+            <main className='
             
-            h-screen flex flex-col p-4 relative theme-custom">
+            h-screen flex flex-col p-4 relative theme-custom'>
             
             {children}
             

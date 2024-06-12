@@ -54,3 +54,14 @@
     }
   }
   
+.auth-form-container {
+  @apply flex h-screen w-full items-center justify-center bg-gradient-to-br from-[#5bcefa] via-[#f5a9e1] to-[#f5a9e1];
+}
+
+.auth-form-input {
+  @apply bg-black/45;
+}
+
+.auth-form-body {
+    @apply mx-auto max-w-sm rounded-2xl bg-white p-8 shadow-2xl dark:bg-gray-900/40 dark:hover:bg-gray-900/60 ease-out duration-300 transition-all;
+  }

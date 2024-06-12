@@ -120,10 +120,10 @@ export default function MenuBar() {
         <MenubarMenu>
           <MenubarTrigger>Profiles</MenubarTrigger>
           <MenubarContent>
-            <MenubarRadioGroup value="benoit">
-              <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-              <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-              <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+            <MenubarRadioGroup value='benoit'>
+              <MenubarRadioItem value='andy'>Andy</MenubarRadioItem>
+              <MenubarRadioItem value='benoit'>Benoit</MenubarRadioItem>
+              <MenubarRadioItem value='Luis'>Luis</MenubarRadioItem>
             </MenubarRadioGroup>
             <MenubarSeparator />
             <MenubarItem inset>Edit...</MenubarItem>
@@ -151,17 +151,17 @@ export default function MenuBar() {
                   <DialogTitle>About</DialogTitle>
                   <DialogDescription>Information about this software</DialogDescription>
                 </DialogHeader>
-                <div className="flex items-center space-x-2">
+                <div className='flex items-center space-x-2'>
                   <Image
-                    src="/favicon.ico"
-                    alt="Logo"
+                    src='/favicon.ico'
+                    alt='Logo'
                     width={32}
                     height={32}
-                    className="rounded"
+                    className='rounded'
                   />
                   <div>
-                    <h2 className="text-lg font-semibold">My App</h2>
-                    <p className="text-sm text-muted-foreground">Version 1.0.0</p>
+                    <h2 className='text-lg font-semibold'>My App</h2>
+                    <p className='text-sm text-muted-foreground'>Version 1.0.0</p>
                   </div>
                 </div>
                 <DialogFooter className='sm:justify-start'>
