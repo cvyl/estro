@@ -27,39 +27,8 @@ import {
 } from '@/components/ui/table'
 import { Line, LineChart, ResponsiveContainer, Tooltip } from 'recharts'
 
-const data = [
-	{
-		average: 400,
-		today: 240
-	},
-	{
-		average: 300,
-		today: 139
-	},
-	{
-		average: 200,
-		today: 980
-	},
-	{
-		average: 278,
-		today: 390
-	},
-	{
-		average: 189,
-		today: 480
-	},
-	{
-		average: 239,
-		today: 380
-	},
-	{
-		average: 349,
-		today: 430
-	}
-]
-
 export default function DosageComponent() {
-	const [selectedDate, setSelectedDate] = useState(new Date())
+	const [selectedDate] = useState(new Date())
 	const [dosage, setDosage] = useState(0)
 	const [estrogenType, setEstrogenType] = useState('')
 	const [dosageHistory, setDosageHistory] = useState([
@@ -77,9 +46,6 @@ export default function DosageComponent() {
 		},
 		{ date: new Date('2023-07-01'), dosage: 4, type: 'Estradiol Gel' }
 	])
-	const handleDateChange = (date: Date) => {
-		setSelectedDate(date)
-	}
 	const handleDosageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setDosage(parseFloat(e.target.value))
 	}
