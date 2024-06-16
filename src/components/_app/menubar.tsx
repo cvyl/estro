@@ -34,7 +34,7 @@ import { DialogClose } from '@radix-ui/react-dialog'
 import { useAuth } from '@clerk/nextjs'
 
 export default function MenuBar() {
-	const { isLoaded, userId, sessionId, getToken } = useAuth()
+	const { isLoaded, userId, sessionId, getToken } = useAuth() // clerk auth but will be implemented later
 	return (
 		<Menubar
 		/**
